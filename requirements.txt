@@ -1,1 +1,6 @@
 gunicorn
+flask
+pickle
+logging
+json
+requests
