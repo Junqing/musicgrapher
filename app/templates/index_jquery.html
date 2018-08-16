@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<title>Musicgrapher</title> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+</head>
+<body>
+<div data-role="page" id="main" data-theme="a" >
+	<div data-role="header" data-theme="a">
+		<h1>{{ artistname }}</h1>
+	</div>
+	<div class="ui-grid-a">
+		<div class="ui-block-a">
+			<p><img src="http://cps-static.rovicorp.com/3/JPG_75/MI0002/860/MI0002860848.jpg?partner=allrovi.com" rel="external" width=160, height=180/></p>
+		</div>
+		<div class="ui-block-b">
+			<ul data-role="listview" data-theme = "a" data-divider-theme="a">
+				<li data-role="list-divider">Genre</li></li>
+				<li class="ui-li ui-li-static">{{ genres }}</li>
+				<li data-role="list-divider">Active Decades</li>
+				<li class="ui-li ui-li-static">{{ activedecades }}</li>
+		</div>
+	</div>
+	<ul data-role="listview" data-inset="true" data-theme="a" data-divider-theme="a">
+		<li data-role="list-divider">Headline Bio</li>
+		<li>They called him Slowhand. A rock guitar legend and arguably the king of British blues.</li>
+		<li data-role="list-divider">Preview</li>
+		<li>Wonderful Tonight</li>
+		<li>
+			<audio controls name="media">
+				<source src="http://wdc.aspiro.com/dc/pser/1183551/12/DK" type="audio/mpeg">
+			</audio>
+		</li>
+	</ul>
+	<p><a href="#d1" data-rel="dialog" data-role="button">MemberOf</a></p>
+	<p><a href="#d2" data-rel="dialog" data-role="button">Discography</a></p>
+	<br />
+	<h2>Recommendations</h2>
+	<div data-role="collapsible" data-theme="a" class="ui-collapsible ui-collapsible-inset">
+		<h3 class="ui-collapsible-heading">Collaborators</h3>
+		<div class="ui-collapsible-content ui-body-c ui-corner-bottom" aria-hidden="false">
+			<ul data-role="listview" data-inset="true" class="ui-listview">
+				<li>The artist(s) similar to and have collaborated with Eric Clapton</li>
+				<li><a href="Pete_Townshend.html" rel="external">Pete Townshend</a></li>
+				<li>Corrina, Corrina</li>
+				<li>
+					<audio controls name="media">
+						<source src="http://wdc.aspiro.com/dc/pser/13189263/12/DK" type="audio/mpeg">
+					</audio>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div data-role="collapsible" data-theme="a" class="ui-collapsible ui-collapsible-inset">
+		<h3 class="ui-collapsible-heading">Influencers</h3>
+		<div class="ui-collapsible-content ui-body-c ui-corner-bottom" aria-hidden="false">
+			<ul data-role="listview" data-inset="true" class="ui-listview">
+				<li>Eric Clapton is inspired by and similar to the following artist(s)</li>
+				<li><a href="J.J._Cale.html" rel="external">J.J. Cale</a></li>
+				<li>Cocaine</li>
+				<li>
+					<audio controls name="media">
+						<source src="http://wdc.aspiro.com/dc/pser/621965/12/DK" type="audio/mpeg">
+					</audio>
+				</li>
+				<li><a href="B.B._King.html" rel="external">B.B. King</a></li>
+				<li>The Thrill Is Gone (1969 Single Version)</li>
+				<li>
+					<audio controls name="media">
+						<source src="http://wdc.aspiro.com/dc/pser/2030205/12/DK" type="audio/mpeg">
+					</audio>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div data-role="collapsible" data-content-theme="a">
+		<h3 class="ui-collapsible-heading">Legacy</h3>
+		<ul data-role="listview" data-theme = "a" data-divider-theme="a">
+		<li>The artist(s) inspired by and similar to Eric Clapton</li>
+		<li>
+			<div data-role="collapsible" data-content-theme="a">
+				<h3 class="ui-collapsible-heading">Similar Followers</h3>
+				<div class="ui-collapsible-content ui-body-c ui-corner-bottom" aria-hidden="false">
+					<ul data-role="listview" data-inset="true" class="ui-listview">
+						<li><a href="Joe_Bonamassa.html" rel="external">Joe Bonamassa</a></li>
+						<li>Chocolate Jesus</li>
+						<li>
+							<audio controls name="media">
+								<source src="http://wdc.aspiro.com/dc/pser/7884393/12/DK" type="audio/mpeg">
+							</audio>
+						</li>
+						<li><a href="Jeff_Healey.html" rel="external">Jeff Healey</a></li>
+						<li>When a Blind Man Cries</li>
+						<li>
+							<audio controls name="media">
+								<source src="http://wdc.aspiro.com/dc/pser/7945783/12/DK" type="audio/mpeg">
+							</audio>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</li>
+		<li>The artist(s)inspired by but different from Eric Clapton</li>
+		<li>
+			<div data-role="collapsible" data-content-theme="a">
+				<h3 class="ui-collapsible-heading">Fresh Followers</h3>
+				<div class="ui-collapsible-content ui-body-c ui-corner-bottom" aria-hidden="false">
+					<ul data-role="listview" data-inset="true" class="ui-listview">
+						<li><a href="Eddie_Van_Halen.html" rel="external">Eddie Van Halen</a></li>
+						<li>No preview available</li>
+					</ul>
+				</div>
+			</div>
+		</li>
+	</div>
+	<div data-role="collapsible" data-content-theme="a">
+		<h3 class="ui-collapsible-heading">Root Diversion</h3>
+		<ul data-role="listview" data-theme = "a" data-divider-theme="a">
+		<li>The artist(s) who have common influencer and are similar with Eric Clapton</li>
+		<li>
+			<div data-role="collapsible" data-content-theme="a">
+				<h3 class="ui-collapsible-heading">Similar artist with common influence</h3>
+				<div class="ui-collapsible-content ui-body-c ui-corner-bottom" aria-hidden="false">
+					<ul data-role="listview" data-inset="true" class="ui-listview">
+						<li><a href="Stevie_Ray_Vaughan.html" rel="external">Stevie Ray Vaughan</a></li>
+						<li>Little Wing (Album Version) (Album Version)</li>
+						<li>
+							<audio controls name="media">
+								<source src="http://wdc.aspiro.com/dc/pser/662096/12/DK" type="audio/mpeg">
+							</audio>
+						</li>
+						<li><a href="Bonnie_Raitt.html" rel="external">Bonnie Raitt</a></li>
+						<li>Used to Rule the World</li>
+						<li>
+							<audio controls name="media">
+								<source src="http://wdc.aspiro.com/dc/pser/14089988/12/DK" type="audio/mpeg">
+							</audio>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</li>
+		<li>The artist(s) who have common influencer as Eric Clapton, but has changed the style of the music</li>
+		<li>
+			<div data-role="collapsible" data-content-theme="a">
+				<h3 class="ui-collapsible-heading">Different artist with same influence</h3>
+				<div class="ui-collapsible-content ui-body-c ui-corner-bottom" aria-hidden="false">
+					<ul data-role="listview" data-inset="true" class="ui-listview">
+						<li><a href="Ian_Hunter.html" rel="external">Ian Hunter</a></li>
+						<li>Central Park 'n' West (2000 - Remaster)</li>
+						<li>
+							<audio controls name="media">
+								<source src="http://wdc.aspiro.com/dc/pser/1429145/12/DK" type="audio/mpeg">
+							</audio>
+						</li>
+						<li><a href="Elvis_Costello.html" rel="external">Elvis Costello</a></li>
+						<li>(I Don't Want To Go To) Chelsea</li>
+						<li>
+							<audio controls name="media">
+								<source src="http://wdc.aspiro.com/dc/pser/1667838/12/DK" type="audio/mpeg">
+							</audio>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</li>
+	</div>
+	<div class="ui-grid-a">
+		<div class="ui-block-a">
+			<p><a data-rel="back" data-role="button">Back</a></p>
+		</div>
+		<div class="ui-block-b">
+			<p><a href="../MusicGrapher.html" rel="external" data-theme="b" data-role="button">Home</a></p>
+		</div>
+	</div>
+</div>
+<div data-role="page" id="d1" data-theme="a">
+	<div data-role="content" data-theme="a">
+		<ul data-role="listview" data-inset="true" data-theme="a">
+			<li>Cream</li>
+			<li>Plastic Ono Band</li>
+			<li>The Yardbirds</li>
+			<li>Blind Faith</li>
+			<li>Derek & the Dominos</li>
+			<li>Eric Clapton's Rainbow Concert Band</li>
+			<li>Casey Jones & The Engineers</li>
+			<li>Eric Clapton Band</li>
+		<p><a href="#main" data-direction="reverse" data-role="button" data-theme="a">Back</a></p>
+	</div>
+</div>
+<div data-role="page" id="d2" data-theme="a">
+	<div data-role="content" data-theme="a">
+		<p><a href="#main" data-direction="reverse" data-role="button" data-theme="a">Back</a></p>
+		<ul data-role="listview" data-inset="true" data-theme="a">
+			<li>Old Sock</li>
+			<li>The Ultimate Hits: The Master Plays the Blues</li>
+			<li>World's Greatest Artists in Review: Eric Clapton</li>
+			<li>Play the Blues: Live from Jazz at Lincoln Center</li>
+			<li>Icon</li>
+			<li>Icon 2</li>
+			<li>Put It Where You Want</li>
+			<li>The Platinum Collection: Reptile/Me & Mr. Johnson/MTV Unplugged</li>
+			<li>Clapton</li>
+			<li>Rarities Edition: 461 Ocean Boulevard</li>
+			<li>Crossroads Guitar Festival 2004 [DVD]</li>
+			<li>Crossroads Guitar Festival 2007 [DVD]</li>
+			<li>I've Got a Rock n' Roll Heart</li>
+			<li>Live from Madison Square Garden</li>
+			<li>Live from Madison Square Garden [2 DVD]</li>
+			<li>10-Minute Teacher: Eric Clapton - Tears in Heaven</li>
+			<li>Forever Man/Little Wing</li>
+			<li>Live at Budokan [DVD]</li>
+			<li>Live at Budokan</li>
+			<li>The A.R.M.S. Benefit London Concert</li>
+			<li>The A.R.M.S. Benefit London Concert [DVD]</li>
+			<li>Road to Escondido/Back Home</li>
+			<li>Pilgrim/Reptile</li>
+			<li>British Legends</li>
+			<li>Masterpieces</li>
+			<li>Budokan 1997</li>
+			<li>Behind The Sun Tour 1985</li>
+			<li>In Japan</li>
+			<li>Legends</li>
+			<li>After Midnight: Live</li>
+			<li>Believe in Life</li>
+			<li>20th Century Heroes</li>
+			<li>Orange Range</li>
+			<li>Crossroads Guitar Festival: 2007</li>
+			<li>Complete Clapton</li>
+			<li>This Song for George: Live in Japan 2001</li>
+			<li>Clapton Is God: The Cream of Early Eric</li>
+			<li>Legends in Music Collection</li>
+			<li>Layla Interviews [DVD]</li>
+			<li>Best of Eric Clapton [MCP]</li>
+			<li>Japan Tour 2006 Limited Edition Chronicle</li>
+			<li>Eric Clapton [Vintage Vinyl]</li>
+			<li>The Road to Escondido</li>
+			<li>Live at Montreux 1986</li>
+			<li>Music in Review</li>
+			<li>Eric Clapton and the Yardbirds [Disky]</li>
+			<li>Early in the Morning</li>
+			<li>Guitar Legend: The Very Best of the Early Years</li>
+			<li>Best of Eric Clapton [DFP]</li>
+			<li>Danger</li>
+			<li>Good Morning Little Schoolgirl/I'm a Man</li>
+			<li>Trilogy: August/Money & Cigarettes/Journeyman</li>
+			<li>Back Home</li>
+			<li>One Track Mind</li>
+			<li>Revolution</li>
+			<li>Chronicles: 461 Ocean Boulevard/There's One in Every Crowd/E.C. Was Here</li>
+			<li>31 Rock Guitar Standards</li>
+			<li>From Four Until Late</li>
+			<li>Little Queen of Spades</li>
+			<li>Stop Breakin' Down Blues</li>
+			<li>If I Had Possession Over Judgement Day [From Sessions for Robert J]</li>
+			<li>Grandes Exitos</li>
+			<li>Classic Eric Clapton</li>
+			<li>Sessions for Robert J.</li>
+			<li>Sessions for Robert J. [DVD & CD]</li>
+			<li>Sessions for Robert J EP</li>
+			<li>The Yardbird Years</li>
+			<li>Crossroads Guitar Festival</li>
+			<li>She's So Respectable</li>
+			<li>Me and Mr. Johnson [DVD]</li>
+			<li>Memories of...</li>
+			<li>Eric Clapton & the Yardbirds [Solo]</li>
+			<li>20th Century Masters - The Millennium Collection: The Best of Eric Clapton</li>
+			<li>Come on in My Kitchen</li>
+			<li>The Very Best of Eric Clapton</li>
+			<li>The Early Years</li>
+			<li>Me and Mr. Johnson</li>
+			<li>If I Had Possession Over Judgement Day [From Me and Mr. Johnson]</li>
+			<li>Selections from Me and Mr. Johnson</li>
+			<li>White Boy Blues</li>
+			<li>Eric Clapton [3 CD Box]</li>
+			<li>Ballads</li>
+			<li>In the Blues with EC, Vol. 3</li>
+			<li>Anthology</li>
+			<li>Eric Clapton [K-Box]</li>
+			<li>Draggin' My Trail</li>
+			<li>Martin Scorsese Presents the Blues: Eric Clapton</li>
+			<li>Unplugged/From the Cradle</li>
+			<li>Money & Cigarettes/Behind the Sun</li>
+			<li>Greatest Hits [Falcon]</li>
+			<li>Hall of Fame</li>
+			<li>The Blues Roots of Eric Clapton</li>
+			<li>Alone with My Friends</li>
+			<li>Time Pieces, Vol. 1-2/Another Ticket</li>
+			<li>One More Car, One More Rider [VHS]</li>
+			<li>One More Car, One More Rider</li>
+			<li>Jazz Collection: Masters of the Blues</li>
+			<li>Roots of Clapton</li>
+			<li>In the Blues with EC, Vol. 1</li>
+			<li>In the Blues with EC, Vol. 2</li>
+			<li>Standing at the Crossroads</li>
+			<li>The Guitar Player</li>
+			<li>Eric Clapton & Friends [Laserlight]</li>
+			<li>With the Yardbirds & Jimmy Page</li>
+			<li>Time Pieces, Vol. 1-2</li>
+			<li>Unplugged/Clapton Chronicles: The Best of Eric Clapton</li>
+			<li>The Legends Collection: The Eric Clapton Collection, Vol. 1 & 2</li>
+			<li>July 1986</li>
+			<li>Tribute to Elmore</li>
+			<li>Forever Man (How Many Times?) [5 Tracks]</li>
+			<li>Collector's Edition</li>
+			<li>I Ain't Gonna Stand for It</li>
+			<li>Reptile</li>
+			<li>Eric Clapton and Friends</li>
+			<li>Legends Collection: The Eric Clapton Collection, Vol. 1</li>
+			<li>Legends Collection: Eric Clapton Collection, Vol. 2</li>
+			<li>Great</li>
+			<li>3 for 1</li>
+			<li>Telephone Blues</li>
+			<li>Marry You/Three O'Clock Blues</li>
+			<li>Help the Poor/Hold On, I'm Coming</li>
+			<li>When My Heart Beats Like a Hammer/I Wanna Be</li>
+			<li>Come Rain or Come Shine/Ten Long Years</li>
+			<li>Worried Life Blues/Days of Old</li>
+			<li>Riding with the King/Key to the Highway</li>
+			<li>From Yardbirds to Bluebreakers</li>
+			<li>Riding with the King</li>
+			<li>Play Me the Blues</li>
+			<li>Best of the Yardbirds Years</li>
+			<li>Strictly the Blues</li>
+			<li>West Coast Idea</li>
+			<li>Most Famous Hits: The Album</li>
+			<li>Blues Collection</li>
+			<li>Instrumentals</li>
+			<li>I Get Lost [CD/Vinyl Single]</li>
+			<li>The Story of Us [Music from the Motion Picture]</li>
+			<li>Cream of Eric Clapton/Blues</li>
+			<li>In Concert: Benefit for Crossroads Centre Antigua</li>
+			<li>Clapton Chronicles: The Best of Eric Clapton [Video]</li>
+			<li>Clapton Chronicles: The Best of Eric Clapton</li>
+			<li>A Legend of Music</li>
+			<li>Eric Clapton & the Yardbirds [Koch]</li>
+			<li>Blue Eyes Blue/Circus</li>
+			<li>461 Ocean Boulevard/Slowhand/There's One in Every Crowd</li>
+			<li>Blues</li>
+			<li>Eric Clapton/Jimmy Page/Jeff Beck</li>
+			<li>Layla: Live</li>
+			<li>Bad Love</li>
+			<li>Pilgrim/Change the World [EP]</li>
+			<li>Change the World [UK]</li>
+			<li>Blues Years</li>
+			<li>Eric Clapton/Jimmy Page/Jeff Beck [Box]</li>
+			<li>Professor Blues Review, Montreux, 1986</li>
+			<li>Pilgrim [Single]</li>
+			<li>Star Profiles</li>
+			<li>U.K. Blues</li>
+			<li>Rarities</li>
+			<li>35 Real Rock Standards</li>
+			<li>Blues Power</li>
+			<li>Tears in Heaven [CD Single]</li>
+			<li>Eric Clapton & Friends [Box]</li>
+			<li>Circus, Pt. 1</li>
+			<li>Circus, Pt. 2</li>
+			<li>Born in Time</li>
+			<li>Clapton Page Beck</li>
+			<li>Double Up: Timepieces/Timepieces, Vol. 2</li>
+			<li>Eric Clapton & the Yardbirds [Going for a Song]</li>
+			<li>My Fathers Eyes [Alex]</li>
+			<li>Pilgrim</li>
+			<li>Live in Hyde Park [Video/DVD]</li>
+			<li>With a Little Help from My...</li>
+			<li>Rock Report: Deserted Cities of the Heart</li>
+			<li>461 Ocean Boulevard/Slowhand</li>
+			<li>Live Whistle Test</li>
+			<li>Early Stages</li>
+			<li>Greatest Hits [Experience]</li>
+			<li>Eric Clapton Box 1983-1994</li>
+			<li>Interview Disc</li>
+			<li>Change the World [US]</li>
+			<li>Beginnings</li>
+			<li>Nothing But the Blues</li>
+			<li>Crossroads, Vol. 2: Live in the Seventies</li>
+			<li>Guitar Method</li>
+			<li>The Cream of Clapton</li>
+			<li>Back from the Edge</li>
+			<li>Motherless Child [Alex]</li>
+			<li>From the Cradle</li>
+			<li>Stages</li>
+			<li>The Magic of Eric Clapton</li>
+			<li>Unplugged</li>
+			<li>Tears in Heaven [Cassette Single]</li>
+			<li>Rush</li>
+			<li>Blue Eyed Blues: Charly Blues Masterworks, Vol. 20</li>
+			<li>Unplugged/From the/Journeyman</li>
+			<li>Unplugged [Video]</li>
+			<li>Wonderful Tonight</li>
+			<li>24 Nights</li>
+			<li>Story</li>
+			<li>Through the Years</li>
+			<li>Journeyman</li>
+			<li>Homeboy</li>
+			<li>Crossroads</li>
+			<li>The Survivor</li>
+			<li>Five Long Years</li>
+			<li>The Cream of Eric Clapton</li>
+			<li>Early Collection</li>
+			<li>Big Boss Man</li>
+			<li>August</li>
+			<li>See What a Love Can Do</li>
+			<li>Greatest Hits [Arcade]</li>
+			<li>Eric Clapton & Friends [Video/DVD]</li>
+			<li>Time Pieces, Vol. 2: Live in the '70s</li>
+			<li>Behind the Sun</li>
+			<li>Don't Care No More</li>
+			<li>Live 1985</li>
+			<li>Backtrackin'</li>
+			<li>Too Much Monkey Business</li>
+			<li>After Midnight</li>
+			<li>Money and Cigarettes</li>
+			<li>461 Ocean Boulevard/Another Ticket</li>
+			<li>Time Pieces: Best of Eric Clapton</li>
+			<li>461 Ocean Boulevard/Backless/Slowhand</li>
+			<li>Another Ticket</li>
+			<li>Steppin' Out</li>
+			<li>Just One Night</li>
+			<li>God: The Cream of Early Eric</li>
+			<li>Classic Cuts</li>
+			<li>Backless</li>
+			<li>Slowhand</li>
+			<li>No Reason to Cry</li>
+			<li>Greatest Hits [Teldec]</li>
+			<li>E.C. Was Here</li>
+			<li>There's One in Every Crowd</li>
+			<li>Blues World of Eric Clapton</li>
+			<li>461 Ocean Boulevard</li>
+			<li>Eric Clapton's Rainbow Concert</li>
+			<li>Clapton [Compilation]</li>
+			<li>Eric Clapton at His Best</li>
+			<li>The History of Eric Clapton</li>
+			<li>Pop History</li>
+			<li>Eric Clapton</li>
+			<li>Pop Giants</li>
+			<li>Pop Music</li>
+			<li>Raw Blues</li>
+			<li>Guitar Boogie</li>
+			<li>Living on Blues Power, Vol. 2</li>
+			<li>Most Famous Hits: The Album, Vol. 2</li>
+			<li>Most Famous Hits: The Album [Disc 1]</li>
+			<li>Eric Clapton & the Yardbirds [Laserlight]</li>
+			<li>The Best of Eric Clapton [Polydor]</li>
+			<li>A Unique Double Bill</li>
+			<li>Time Pieces Vol. 1: The Best of Eric Clapton + Time Pieces Vol. 2: Live In The Seventies</li>
+			<li>The 1960's Review</li>
+			<li>Run Back to Your Side</li>
+			<li>Lonely Years</li>
+			<li>Blues Masterworks</li>
+			<li>Blues [Box Set]</li>
+			<li>Autumn Leaves</li>
+			<li>Early Daze</li>
+			<li>Eric Clapton, Vol. 1</li>
+			<li>Eric Clapton [Weton]</li>
+	</div>
+</div>
+</body>
+</html>
