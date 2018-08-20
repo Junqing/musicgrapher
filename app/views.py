@@ -27,6 +27,17 @@ dict_keys(['ids', 'name', 'isGroup', 'primaryMedia', 'musicGenres',
 'compositions', 'compositionsUri', 'aliases', 'aliasesUri', 'web', 'webUri', 
 'factsheets', 'factsheetsUri', 'schedule', 'scheduleUri', 'credits', 'creditsUri'])
 """
+
+def getComponent(metaresult, key):
+    component = metaresult[key]
+    datalist = []
+    if component:
+        if isinstance(component, list) and isinstance(component[0], dict):
+            datalist = [item['name'] for item in metaresult[key]]
+        elif isinstance(component, list):
+            datalist = component
+    return datalist
+
 @app.route('/<string:name>', methods=['GET', 'POST'])
 def index(name):
     response = requests.get(rovi_artist_search_url, params = {"name":name})
@@ -34,20 +45,20 @@ def index(name):
     result = content['searchResponse']['results'][0]
     metaresult = result['name']
     artistname = metaresult['name']
-    activedecades = '\t'.join(metaresult['active'])
-    genres = '\t'.join(metaresult['musicGenres'])
+    activedecades = getComponent(metaresult, 'active')
+    genres = getComponent(metaresult, 'musicGenres')
     headlinebio = metaresult['headlineBio']
     classicalbio = metaresult['classicalBio']
-    followers = [item['name'] for item in metaresult['followers']]
-    influencers = [item['name'] for item in metaresult['influencers']]
-    similars = [item['name'] for item in metaresult['similars']]
-    collaboratorWith = [item['name'] for item in metaresult['collaboratorWith']]
-    moods = [item['name'] for item in metaresult['moods']]
-    musicStyles = [item['name'] for item in metaresult['musicStyles']]
+    followers = getComponent(metaresult, 'followers')
+    influencers = getComponent(metaresult, 'influencers')
+    similars = getComponent(metaresult, 'similars')
+    collaboratorWith = getComponent(metaresult, 'collaboratorWith')
+    moods = getComponent(metaresult, 'moods')
+    musicStyles = getComponent(metaresult, 'musicStyles')
 
     return render_template('index_simple.html', 
                             artistname = artistname,
-                            activedecades = activedecades,
+                            activedecades=activedecades,
                             genres = genres,
                             headlineBio = headlinebio,
                             classicalBio = classicalbio,

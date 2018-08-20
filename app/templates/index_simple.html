@@ -6,25 +6,41 @@
     <div>
         <h1>Artist Name</h1>
         <p>{{ artistname }} </p>
-        <h1>Active Decades</h1>
-        <p>{{ activedecades }} </p>
-        <h1>Genres</h1>
-        <p>{{ genres }} </p>
-        <h1>Headline Bio</h1>
+        <h2>Active Decades</h2>
+        {% for decade in activedecades %}
+            <p>{{ decade }} </p>
+        {% endfor %} 
+        <h2>Genres</h2>
+        {% for genre in genres %}
+            <p>{{ genre }} </p>
+        {% endfor %}
+        <h2>Headline Bio</h2>
         <p>{{ headlineBio }} </p>
-        <h1>Classical Bio</h1>
+        <h2>Classical Bio</h2>
         <p>{{ classicalBio }} </p>
-        <h1>Influenced By..</h1>
-        <p>{{ influencers }} </p>
-        <h1>Inspiration To../h1>
-        <p>{{ followers }} </p>
-        <h1>Similar Artists</h1>
-        <p>{{ similars }} </p>
-        <h1>Collaborator With..</h1>
-        <p>{{ collaboratorWith }} </p>
-        <h1>Moods</h1>
-        <p>{{ moods }} </p>
-        <h1>Music Styles</h1>
-        <p>{{ musicStyles }} </p>
+        <h2>Influenced By..</h2>
+        {% for inf in influencers %}
+            <p>{{ inf }} </p>
+        {% endfor %}
+        <h2>Inspiration To..</h2>
+        {% for fol in followers %}
+            <p>{{ fol }} </p>
+        {% endfor %}
+        <h2>Similar Artists</h2>
+        {% for sim in similars %}
+            <p>{{ sim }} </p>
+        {% endfor %}
+        <h2>Collaborator With..</h2>
+        {% for col in collaboratorWith %}
+            <p>{{ col }} </p>
+        {% endfor %}
+        <h2>Moods</h2>
+        {% for mood in moods %}
+            <p>{{ mood }} </p>
+        {% endfor %}
+        <h2>Music Styles</h2>
+        {% for style in musicStyles %}
+            <p>{{ style }} </p>
+        {% endfor %}
     </div>
 </html>
