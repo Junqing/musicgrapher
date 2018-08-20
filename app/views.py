@@ -33,20 +33,29 @@ def index(name):
     content = json.loads(response.content)
     result = content['searchResponse']['results'][0]
     metaresult = result['name']
-    
-
+    artistname = metaresult['name']
+    activedecades = '\t'.join(metaresult['active'])
+    genres = '\t'.join(metaresult['musicGenres'])
+    headlinebio = metaresult['headlineBio']
+    classicalbio = metaresult['classicalBio']
+    followers = [item['name'] for item in metaresult['followers']]
+    influencers = [item['name'] for item in metaresult['influencers']]
+    similars = [item['name'] for item in metaresult['similars']]
+    collaboratorWith = [item['name'] for item in metaresult['collaboratorWith']]
+    moods = [item['name'] for item in metaresult['moods']]
+    musicStyles = [item['name'] for item in metaresult['musicStyles']]
 
     return render_template('index_simple.html', 
-                            artistname = metaresult['name'],
-                            activedecades = '\n'.join(metaresult['active']),
-                            genres = metaresult['musicGenres'],
-                            headlineBio = metaresult['headlineBio'],
-                            classicalBio = metaresult['classicalBio'],
-                            followers = metaresult['followers'],
-                            influencers = metaresult['influencers'],
-                            similars = metaresult['similars'],
-                            moods = metaresult['moods'],
-                            musicStyles = metaresult['musicStyles'],
-                            collaboratorWith = metaresult['collaboratorWith']
+                            artistname = artistname,
+                            activedecades = activedecades,
+                            genres = genres,
+                            headlineBio = headlinebio,
+                            classicalBio = classicalbio,
+                            followers = followers,
+                            influencers = influencers,
+                            similars = similars,
+                            moods = moods,
+                            musicStyles = musicStyles,
+                            collaboratorWith = collaboratorWith
     )
 
