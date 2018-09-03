@@ -33,7 +33,7 @@ def getComponent(metaresult, key):
     datalist = []
     if component:
         if isinstance(component, list) and isinstance(component[0], dict):
-            datalist = [item['name'] for item in metaresult[key]]
+            datalist = ["{} - {}".format(item['name'],item['weight']) for item in metaresult[key]]
         elif isinstance(component, list):
             datalist = component
     return datalist
@@ -45,7 +45,8 @@ def index(name):
     result = content['searchResponse']['results'][0]
     metaresult = result['name']
     artistname = metaresult['name']
-    activedecades = getComponent(metaresult, 'active')
+    activedecades = ["{} - {}".format(getComponent(metaresult, 'active')[0],
+                                    getComponent(metaresult, 'active')[-1])]
     genres = getComponent(metaresult, 'musicGenres')
     headlinebio = metaresult['headlineBio']
     classicalbio = metaresult['classicalBio']
